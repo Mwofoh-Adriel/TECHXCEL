@@ -1,0 +1,344 @@
+*{
+  margin: 0; /*  sets the margin of all elements to 0 */
+  padding: 0; /* sets the padding of all elements to 0 */
+  box-sizing: border-box; /* Instead of adding padding and border to the width/height, it includes them */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-decoration: none; /*removes the underline from all links */
+  list-style: none;  /* removes the bullet points from all lists */
+}
+html{
+  scroll-behavior: smooth;
+}
+.header{  
+  position: fixed; /* positions the header relative to the browser window, It will stay in the same place even if the page is scrolled */
+  top: 0;
+  left: 0;
+  width: 100%;  /*makes the header span the full width of its container */
+  padding: 35px 12%; /*adds padding to the header. 35px is the top and bottom padding, and 12% is the left and right padding. */
+  background: rgba(0, 0, 0, 0.8); /* sets the background color of the header to black */   
+  backdrop-filter: blur(10px);  /*applies a blur effect to the elements behind the header*/
+  display: flex; /* applies a flexible box layout to the header  */
+  justify-content: space-between; /* distributes the items in the header evenly along the horizontal line with equal space between them */
+  align-items: center; /* aligns the items in the header vertically in the center */
+  z-index: 100; /* sets the stack order of the header */
+}
+.logo{
+   font-size: 40px; /* sets the font size of the text in the .logo class to 25px*/
+   color: white;  /* sets the color of the text in the .logo class to white */
+   font-weight: 100; /*  sets the thickness of the font */
+   transition: 0.3s ease;  /* applies a transition effect to the properties of the .logo class */
+}  
+.logo:hover{
+color: orangered; /*  changes the color of the text in the .logo class to orange-red when it's hovered over */
+text-shadow: 0 0 25px orangered,
+             0 0 50px orangered; /* The two shadows together create a glowing effect */
+transform: scale(1,1); /*  The first value 1 scales the width, and the second value 1 scales the height */
+}
+span{
+color: orangered; /* set the text color for all <span> elemwnts to  orangered*/
+}
+.navbar a{
+font-size: 18px;
+color: white;
+font-weight: 500;
+margin: 0 20px; /* sets the margin around the links, 0 is the top and bottom margin, and 20px is the left and right margin */
+border-bottom: 3px solid transparent; /*sets a bottom border on the links that is 3 pixels thick, solid, and transparent */
+transition: 0.3s ease;  /* applies a transition effect to the properties of the .logo class */
+}
+.navbar a:hover,
+.navbar a.active{
+color: orangered;
+border-bottom: 3px solid orangered;
+}
+.sign{
+  padding: 8px 18px; /*adds padding to the contact, 10px is the top and bottom padding, and 20% is the left and right padding. */
+  background-color: gray; /* background-color is set to white */
+  color: black;  /* set the color of the text to black */
+  border: 2px solid transparent;
+  border-radius: 9px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600; /*  sets the thickness of the font */
+  transition: 0.3s ease;
+  } 
+.sign:hover{
+  background-color: orangered;
+  box-shadow: 0 0 25px orangered; /* creates a glowing effect when hover over it*/
+  color: white; /* set the color of the text to white */
+}
+
+  /* style for the index.html file */
+.home{
+    width: 100%; /*  sets the width of the .home element to 100% of its parent element's width */
+    min-height: 100vh; /* sets the minimum height of the .home element to 105% of the viewport's height */
+    background: rgb(241, 241, 241); /* sets the background color of the .home element to a light gray color */
+    display: flex; /* applies a flexible box layout to the .home element */
+    align-items: center;  /* aligns the items in the .home element vertically in the center */
+    gap: 14%; /*  sets the gap between the flex items in the .home element to 7cm */
+    padding: 30px 11% 0; /* 30px is the top padding, 11% is the right and left padding, and 0 is the bottom padding */
+  }
+    
+.home-content{
+    max-width: 800px; /* sets the maximum width of the .home-content element to 800 pixels */
+}
+.home-content h3{
+    font-size: 40px;
+}
+    
+.home-content h1{
+    font-size: 60px; /* sets the font size of the text in these <h1> elements to 62 pixels */
+    line-height: 1.2; /* sets the distance between lines of text, A line-height of 1.2 means that the space between lines is 20% more than the size of the font */
+}
+.home-content p{
+    font-size: 20px; /* sets the font size of the text in these <p> elements to 15 pixels */
+    margin: 25px 0 15px;
+  }
+  /* Styles for the buttons for the contact form for the contact.html file */
+/* .btn-box{
+    width: 345px; /* set the width of the .btn-box element to 345 pixels  
+    display: flex;
+    gap: 4%;
+    } */
+.btn-1{
+    padding: 15px 28px; /* 15px is the top and bottom padding, 28px is the right and left padding */
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px; /* sets the font size of the text in these .btn1 elements to 18 pixels */
+    letter-spacing: 1px; /* sets the space between characters in a text */
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer; /* changes the mouse cursor to a pointer(hand) when it's over the element */
+}
+.btn-1:hover{
+    background-color: white;
+    color: black; /* set the color of the text to black */
+    border: 2px solid black;
+}   
+.btn-2{
+    padding: 15px 28px;
+    background-color: orangered; /* set the background-color of the text to orangered */
+    color: white; /* set the color of the text to white */
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 18px; /* sets the font size of the text in these .btn1 elements to 18 pixels */
+    letter-spacing: 1px; /* sets the space between characters in a text */
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer; /* changes the mouse cursor to a pointer(hand) when it's over the element */
+}    
+.btn-2:hover{
+    background-color: white;
+    color: orangered; /* set the color of the text to orangered */
+} 
+.img-box img{
+  border-radius: 7%; /* changes the display type of the <li> elements to inline-block */
+  width: 200px;
+  }
+
+  /* style for the about.html file */
+.about{
+    display: flex; /* applies a flexible layout to the .about */
+    justify-content: center; /* distributes the items in the .about evenly along the horizontal line with equal space between them */
+    align-items: center;
+    padding: 12% 8%;
+    gap: 7%;
+    background: gray}
+.about-img img{
+    position: relative; /* sets the position of an element relative to its normal position */
+    width: 200px;
+    box-shadow: 0 0 25px orangered,
+              0 0 25px  orangered; /* creates a glowing effect */
+    border-radius: 10%;
+}
+    
+.about-content h2{
+    text-align: left;
+    color: whitesmoke; /* set the color of the text to white */
+    font-size: 40px;
+}    
+.about-content p{
+    color: whitesmoke ;
+    font-size: 20px;
+    margin: 2cm 0 3cm; /* 2cm sets the top margin, 0 sets the right and left margins, 3cm sets the bottom margin */
+}
+
+/* style for the contact.html file */ 
+.contact-form h2{
+  text-align: center; /* Centralised the text */
+  margin-top: 15%;
+  margin-bottom: 1cm;
+  font-size: 36px;
+  }
+  
+  .contact-form form{
+  max-width: 30%;
+  margin: 1rem auto; /* 1rem sets the top and bottom margins, auto sets the right and left margins(when auto is used, the browser automatically calculates the margins) */
+  text-align: center;  /* Centralised the text */
+  margin-bottom: 3cm;
+  }
+  
+  .contact-form form .input-box{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* wraps the the boxes*/
+  }
+  
+  .contact-form form .input-box input,
+  .contact-form form textarea{
+  width: 90%;
+  padding: 0.5cm;
+  font-size: 18px;
+  color: black;
+  background: rgb(241, 241, 241);
+  border-radius: 0.8rem;
+  margin: 1rem 0;
+  resize: none;
+  }
+  
+  .footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 25px 0;
+    background-color: black;
+    }
+    
+    .footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+    }
+    
+    .footer .social a{
+    font-size: 24px;
+    color: white;
+    border: 2px solid orangered;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+    transition: o.3s ease;
+    }
+    
+    .footer .social a:hover{
+    transform: scale(1.2)translateV(-10px);
+    color: orangered;
+    border: 2px solid orangered;
+    }
+    
+    .footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 10px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+    }
+    
+    .footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: o.3s ease;
+    }
+    
+    .footer ul li a:hover{
+    border-bottom: 3px solid orangered;
+    } 
+    
+    .footer ul li{
+    display: inline-block;   /*changes the display type of the <li> elements to inline-block*/ 
+    padding: 0 15px;  /*0 is the top and bottom padding, and 15px is the left and right padding */
+    }
+    
+    .footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    }
+
+  /* Sytle for the signup.html file */
+  .signup-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 200px 0;
+}
+.signup-form input[type="text"],
+.signup-form input[type="password"],
+.signup-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.row {
+  /* padding: 12% 8%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  padding: 6.8% 3%;
+}
+
+.sign2{
+  padding: 8px 18px; /*adds padding to the contact, 10px is the top and bottom padding, and 20% is the left and right padding. */
+  background-color: gray; /* background-color is set to white */
+  color: black;  /* set the color of the text to black */
+  border: 2px solid transparent;
+  border-radius: 9px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600; /*  sets the thickness of the font */
+  transition: 0.3s ease;
+}
+
+.sign2:hover{
+    background-color: orangered;
+    box-shadow: 0 0 25px orangered; /* creates a glowing effect when hover over it*/
+    color: white; /* set the color of the text to white */
+  }
+   
+button{
+  padding: 8px 18px; /*adds padding to the contact, 10px is the top and bottom padding, and 20% is the left and right padding. */
+  background-color: gray; /* background-color is set to white */
+  color: black;  /* set the color of the text to black */
+  border: 2px solid transparent;
+  border-radius: 9px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600; /*  sets the thickness of the font */
+  transition: 0.3s ease;
+}
+
+button:hover{
+  background-color: orangered;
+  box-shadow: 0 0 25px orangered; /* creates a glowing effect when hover over it*/
+  color: white; /* set the color of the text to white */
+}
+ 
+/* @keyframes appear{
+  from{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  } 
+}
+.column  {
+  animation: appear linear;
+  animation-timiline: view();
+  animation-range: entry 0;
+} */

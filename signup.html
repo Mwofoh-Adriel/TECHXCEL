@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup-page</title>
+  <!-- style.css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- boxicons.min.css -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header class="header"> 
+    <a href="#" class="logo"><span>Techx</span>cel</a>
+      <!-- The start block of the navbar -->
+    <nav class="navbar"> 
+      <a href="index.html" >Home</a>
+      <a href="Business.html">Business</a>
+      <!-- In index.html -->
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="active">sign Up</a>
+    </nav>
+    <!-- The end block of the navbar -->
+    
+  </header>
+
+  <div class="signup-form">
+    <h2>Sign Up</h2>
+    <form action="/submit-signup" method="post">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="Location" placeholder="Location e.g Buea" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="password" placeholder="Confirm-Password" required>
+        <input type="text" name="Description" placeholder="Description" required> 
+        <!-- <input type="submit" value="Sign Up" class="sign2"> -->
+        <button  type="submit" class="sign2" value="Sign Up"><a href="Business.html">SignUp</a></button>
+        
+    </form>
+    <p>Already have an account? <button  type="submit" class="sign2" value="Sign Up"><a href="Business.html">Log in</a></button></p>
+</div>
+  <footer class="footer">
+
+    <div class="social">
+     <a href="https://www.linkedin.com/in/adriel-mwofoh-6ab680269/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+      <a href="https://twitter.com/AdrielTass57403" target="_blank"><i class='bx bxl-twitter'></i></a>
+      <a href="https://www.instagram.com/mwofohadriel/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+    </div>
+    
+    <p class="copyright"> &copy; 2024 Techxcel | All rights Reserved</p> 
+  </footer> 
+</body>
+</html>
